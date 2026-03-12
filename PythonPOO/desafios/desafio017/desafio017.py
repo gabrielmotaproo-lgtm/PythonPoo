@@ -14,4 +14,4 @@ p1 = Produto("Produto 1", 40)
 p2 = Produto("Produto 2", 20)
 
 p1.etiqueta()
-p2.etiqueta()
+p2.etiqueta() 

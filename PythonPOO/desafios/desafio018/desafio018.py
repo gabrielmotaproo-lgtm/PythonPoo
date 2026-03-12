@@ -13,11 +13,12 @@ class Churrasco:
         comprarKg = self.consumoPadrao * self.qtd
         comprarCusto = comprarKg * self.precoKg
         pessoaPaga = comprarCusto / self.qtd
-        panel = Panel(f"Analisando [green]{self.nome}[/] com [blue]{self.qtd} convidados[/] \n Cada participante comerá {self.consumoPadrao}Kg e cada Kg custa {self.precoKg}\n Recomendo [blue]comprar {comprarKg}Kg de carne[/] \n O custo total será de [green]R${comprarCusto:,.2f}[/]\n Cada pessoa pagará [yellow]R${pessoaPaga} para participar.[/]")
+        conteudo = f"Analisando [green]{self.nome}[/] com [blue]{self.qtd} convidados[/] \n Cada participante comerá {self.consumoPadrao}Kg e cada Kg custa {self.precoKg}\n Recomendo [blue]comprar {comprarKg}Kg de carne[/] \n O custo total será de [green]R${comprarCusto:,.2f}[/]\n Cada pessoa pagará [yellow]R${pessoaPaga} para participar.[/]"
+        panel = Panel(conteudo, title=self.nome)
         print(panel)
 
 
-c1 = Churrasco("Churras dos Amigos", 15)
+c1 = Churrasco("Churras do CPX", 100)
 c1.analisar()
 #Considere:
 # Consumo padrão: 400g por pessoa
